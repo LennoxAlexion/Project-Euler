@@ -1,0 +1,9 @@
+prime = 1
+number =600851475143
+pn =1
+while pn <=number:
+	if number % pn ==0:
+		prime = pn
+		number = number/pn
+	pn+=1
+print prime
