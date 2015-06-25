@@ -1,0 +1,11 @@
+a_prev = 1
+a_next = 2
+#a_next = a0+a_prev;
+sum=0
+while a_next < 4000000 :
+	if a_next%2==0:
+		sum+=a_next
+	temp = a_next
+	a_next=a_next+a_prev
+	a_prev=temp
+print sum
