@@ -1,0 +1,21 @@
+def largest_pal():
+	a=[]
+	n1=999
+	n2=999
+	while n1>99:
+		while n2>99:
+			temp=0
+			prod=n1*n2
+			while prod > 0:
+				temp+=prod%10
+				if prod/10>0:
+					temp*=10
+				prod= prod/10
+			if temp==n1*n2:
+				a.append(temp);
+			#	print "prod :",n1*n2,"temp :", temp,"n1 :",n1,"n2 :",n2
+			n2-=1
+		n1-=1
+		n2=999
+	return a
+print max((largest_pal()))
